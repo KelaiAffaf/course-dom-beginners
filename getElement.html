@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Titre 1</h1>
+    <h1>Titre 2</h1>
+    <h1>Titre 3</h1>
+    <h1>Titre 4</h1>
+    <h1>Titre 5</h1>
+    <h1>Titre 6</h1>
+    <!-- ClassName -->
+    <div class="container">
+      <div class="item">item1</div>
+      <div>item2</div>
+      <div>item3</div>
+      <div class="item">item4</div>
+    </div>
+    <div class="container">
+      <div class="class-1">class1</div>
+      <div class="class-1">class2</div>
+      <div class="class-1">class3</div>
+      <div class="class-1">class4</div>
+      <div class="class-1">class5</div>
+    </div>
+    <!-- getEleemntById -->
+    <div id="item1">hello world</div>
+    <div id="item2">hello world</div>
+    <div id="item3">hello world</div>
+    <div id="item4">hello world</div>
+
+    <script>
+      // getElemntsByTagName() return Html collection == plusieurs elements
+      let titres = document.getElementsByTagName("h1");
+      console.log(titres);
+      for (let index = 0; index < titres.length; index++) {
+        console.log(titres[index]);
+      }
+      // getElementsByClassName() ==> return Html collection == plusieurs elements
+      let container = document.getElementsByClassName("container");
+      let div = document.getElementsByTagName("div");
+      console.log(div);
+      console.log(container);
+    //   getElementById()==> returns only One element 
+      let item = document.getElementById("item1");
+      console.log(item);
+
+     console.log('====================================');
+     console.log('QuerySelectors');
+     console.log('====================================');
+    // QuerySelector && QueerySelectorAll
+    // quesrySelector ==> returns only One element which is the first elemnt
+    // we target element the same why we do with css == .class , #id , tag 
+    let divTagAll = document.querySelector("div");
+    console.log(divTagAll);
+    let divClassAll= document.querySelector(".container");
+    console.log(divClassAll);
+    let divIdAll= document.querySelector("#item1");
+    console.log(divIdAll);
+
+    // QueerySelectorAll ==> WORKS THE SAME WAY QueerySelector BUT IT BRINGS ALL elements 
+    let divTag = document.querySelectorAll("div");
+    console.log(divTag);
+    let divClass= document.querySelectorAll(".container");
+    console.log(divClass);
+    let divId= document.querySelectorAll("#item1");
+    console.log(divId);
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .class1 {
+            color: red;
+            border: 1px solid black;
+            font-size: large;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Titre 1</h1>
+      <h1>Titre 2</h1>
+      <h1>Titre 3</h1>
+      <h1>Titre 4</h1>
+      <h1>Titre 5</h1>
+      <h1>Titre 6</h1>
+    </div>
+    <script>
+        let div = document.querySelector("div");
+        let h1 = div.querySelectorAll("h1"); // return a NodeList (array)
+        // add claasName to div
+        div.class='container';
+        div.classList.add('class1','class2');
+        // add id as attribute
+        div.setAttribute('id','container');
+        // remove className
+        div.addEventListener('click',function(){
+          div.classList.toggle('class1');
+        });
+
+        // Style element css 
+        // Style with only one proprity
+        h1[0].style.color = "blue";
+        h1[0].style.fontSize = "50px";
+        for (let index = 0; index < h1.length; index++) {
+            if (index % 2 == 0) {
+                h1[index].style.color = "green";
+            } else {
+                h1[index].style.color = "blue";
+            }
+        }
+        // Style with multiple proprity
+        h1[1].style.cssText = "color:red;font-size:30px; border: 1px solid black;";
+        // Style with className
+        h1[2].className = "class1";
+        // Style with id
+        h1[3].id = "titre3";
+        // Style with setAttribute
+        h1[4].setAttribute('style','color:red;font-size:30px; border: 1px solid black;');
+        
+        
+    </script>
+  </body>
+</html>

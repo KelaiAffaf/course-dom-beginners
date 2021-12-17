@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git lab</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>tirte1</h1>
+      <h1>tirte1</h1>
+      <h1>tirte1</h1>
+      <h1>tirte1</h1>
+      <h1>tirte1</h1>
+      <button>click</button>
+    </div>
+    <script>
+      let tires = document.querySelectorAll("h1");
+      for (let index = 0; index < tires.length; index++) {
+        if (index % 2 == 0) {
+          tires[index].style.color = "red";
+        } else {
+          tires[index].style.color = "blue";
+        }
+      }
+      let btn = document.querySelector("button");
+      let array = ["red", "blue", "green", "yellow", "pink"];
+        let index = 0;
+      btn.addEventListener("click", function () {
+          document.body.style.backgroundColor = array[index];
+            index++;
+            if (index == array.length) {
+                index = 0;
+            }
+            let newElement= document.createElement("h1");
+            newElement.innerHTML = "new element";
+            document.body.appendChild(newElement);
+            newElement.style.color = "red";
+        });
+    </script>
+  </body>
+</html>
