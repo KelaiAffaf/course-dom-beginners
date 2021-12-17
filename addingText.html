@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Cours:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>this is you all challenges in 2021</h1>
+      <h2>Full Stack js track</h2>
+      <ul></ul>
+    </div>
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+      const h1 = wrapper.querySelector("h1");
+      h1.textContent = "new text"; // textContent is a property of the h1 element
+      h1.innerHTML = "<span>new text</span>"; // innerHTML is a property of the h1 element
+      const lists = `
+    <li>Full Stack js track </li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVA SCRIPT</li>
+            <li>Git/github</li>
+            <li>React</li>
+            <li>Back-end</li>`;
+      const ul = document.querySelector("ul");
+      ul.innerHTML = lists;
+      wrapper.addEventListener("click", function () {
+        ul.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>
