@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Go MyCode challenges in 2021</h1>
+      <h2>learning JavaScript Challenge</h2>
+      <ul>
+        <li>HTML Challenge Done</li>
+        <li>CSS Challenge Done</li>
+        <li>javaScript Challenge Coming</li>
+        <li>Git/Github Challenge Ongoing</li>
+        <li>Reactjs Challenge Coming</li>
+        <li>Back-end with NodeJS and Express Challenge Coming</li>
+        <li>DataBase with MongDB Challenge Coming</li>
+      </ul>
+    </div>
+
+    <script>
+        // The h1 color is changing every 1 second
+       const h1 = document.querySelector("h1");
+    //    first Methode using an array
+         const array = ["red", "blue", "green", "yellow", "pink"];
+            let index = 0;
+            setInterval(function () {
+                h1.style.color = array[index];
+                index++;
+                if (index == array.length) {
+                    index = 0;
+                }
+            }, 1000);
+    //    second Methode using a function generating random hexa color
+        function randomColor() {
+            let hexa = "#";
+            for (let index = 0; index < 6; index++) {
+                let random = Math.floor(Math.random() * 16);
+                hexa += random.toString(16);
+            }
+            return hexa;
+        }
+        setInterval(function () {
+            h1.style.color = randomColor();
+        }, 1000);
+
+    </script>
+  </body>
+</html>
