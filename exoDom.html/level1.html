@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 1. Create an index.html file and put four p elements as above: 
+    2. Get the first paragraph by using ***document.querySelector(tagname)*** and tag name
+    3. Get each of the the paragraph using ***document.querySelector('#id')*** and by their id
+    4. Get all the p as nodeList using ***document.querySelectorAll(tagname)*** and by their tag name
+    5. Loop through the nodeList and get the text content of each paragraph
+    6. Set a text content to paragraph the fourth paragraph,***Fourth Paragraph***
+    7. Set id and class attribute for all the paragraphs using different attribute setting methods -->
+
+
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
+    <p>Fourth Paragraph</p>
+
+
+
+
+<script>
+    // ### **Exercise: Level 1**
+   const firstP = document.querySelector('p');
+    console.log(firstP);
+    const secondP = document.querySelector('#item1');
+    console.log(secondP);
+    const thirdP = document.querySelector('p:nth-child(3)');
+    console.log(thirdP);
+    const fourthP = document.querySelector('p:nth-child(4)');
+    console.log(fourthP);
+
+
+</script>
+</body>
+</html>
