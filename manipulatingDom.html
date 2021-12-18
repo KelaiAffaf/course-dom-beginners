@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .newElement {
+        background-color: rgba(255, 0, 0, 0.452);
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <script>
+      // create new element inside div container
+      // first Methode using createElement
+      // Step 1 : create a new element
+      let newElement = document.createElement("div");
+      // Step 2 : add a class to the new element
+      newElement.classList.add("newElement");
+      // Step 3 : add text to the new element
+      newElement.textContent = "Hello World";
+      // Step 4 : add the new element to the container
+      document.querySelector(".container").appendChild(newElement);
+      // appendChild ==> link the new element to the container
+      // removeChild ==> unlink the new element to the container
+      // replaceChild ==> replace the old element by the new one
+      // insertBefore ==> insert the new element before the old one
+      // insertAfter ==> insert the new element after the old one
+      // parentElement ==> return the parent element
+      // parentNode ==> return the parent node
+      // childElementCount ==> return the number of child element
+      // firstElementChild ==> return the first child element
+      // lastElementChild ==> return the last child element
+      // nextElementSibling ==> return the next sibling element
+      // previousElementSibling ==> return the previous sibling element
+      // children ==> return the children element
+
+      // second Methode using innerHTML
+      // Step 1 : create a new element
+      let newElement2 = document.createElement("div");
+      // Step 2 : add a class to the new element
+      newElement2.classList.add("newElement");
+      // Step 3 : add text to the new element
+      newElement2.innerHTML = `<p>Hello World</p>`;
+      // Step 4 : add the new element to the container
+      document.querySelector(".container").appendChild(newElement2);
+    </script>
+  </body>
+</html>
